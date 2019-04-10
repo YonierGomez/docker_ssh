@@ -1,1 +1,37 @@
-# docker_ssh
+Conectate vía ssh a tus contenedores para gestionarlos
+======================================================
+
+# Referencia rápida
+
+-	**Web Yonier Gómez**:  
+	[Sitio oficial de Neytor](https://www.neytor.com/) web en construcción.
+  
+# ¿Qué es  ssh?
+
+SSH o Secure Shell, es un protocolo de administración remota que permite a los usuarios controlar y modificar sus servidores remotos a través de Internet. 
+
+> [wikipedia.org/wiki/Secure_Shell)](https://es.wikipedia.org/wiki/Secure_Shell)
+
+![logo](https://miro.medium.com/max/544/0*mqE9-fHbs78SweX_.png)
+
+
+# ¿Cómo usar esta imagen?
+
+## Crear container y exponer el puerto 22
+
+```console
+$ docker run --name ssh -d -p 22:22 neytor/ssh
+```
+## Crear container y exponer el puerto 2222
+
+```console
+$ docker run  --name ssh -d -p 2222:22 neytor/ssh
+```
+## ¿Cómo consultar la ip de mi contenedor?
+
+```console
+$ docker inspec ssh
+```
+
+## Te invito a visitar mi web
+Puedes ver nuevos eventos en [https://www.neytor.com/](https://www.neytor.com).
