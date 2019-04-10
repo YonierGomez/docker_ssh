@@ -40,6 +40,7 @@ $ docker run --name ssh -dti -p 2222:22 --privileged neytor/ssh
 $ docker run --name ssh -dti -p 22:22 --privileged neytor/ssh
 
 Opcionar: Habilitar contexto container_file_t
+```
 
 ## Te invito a visitar mi web
 Puedes ver nuevos eventos en [https://www.neytor.com/](https://www.neytor.com).
