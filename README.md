@@ -33,5 +33,13 @@ $ docker run  --name ssh -dti -p 2222:22 neytor/ssh
 $ docker inspect ssh
 ```
 
+## ¿Utilizas Selinux? crear contenedor con privilegios
+
+```console
+$ docker run --name sshsystemd -dti -p 2222:22 --privileged neytor/ssh_systemd
+$ docker run --name sshsystemd -dti -p 22:22 --privileged neytor/ssh_systemd
+
+Opcionar: Habilitar contexto container_file_t
+
 ## Te invito a visitar mi web
 Puedes ver nuevos eventos en [https://www.neytor.com/](https://www.neytor.com).
