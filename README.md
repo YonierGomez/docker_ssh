@@ -4,7 +4,7 @@ Conectate vía ssh a tus contenedores para gestionarlos
 # Referencia rápida
 
 -	**Web Yonier Gómez**:  
-	[Sitio oficial de Neytor](https://www.neytor.com/) web en construcción.
+	[Sitio oficial de Neytor](https://www.neytor.com) web en construcción.
   
 # ¿Qué es  ssh?
 
@@ -31,6 +31,14 @@ $ docker run  --name ssh -dti -p 2222:22 neytor/ssh
 
 ```console
 $ docker inspect ssh
+```
+
+## Conectarse vía ssh desde mi terminal
+
+Para la conexión vía ssh se utiliza el usuario labo o root con password labo
+
+```console
+$ ssh -i labo #ipdelamáquinadondecorremicontenedor -p 2222
 ```
 
 ## ¿Utilizas Selinux? crear contenedor con privilegios
