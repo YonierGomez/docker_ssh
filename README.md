@@ -47,8 +47,11 @@ $ ssh -i labo #ipdelamáquinadondecorremicontenedor -p 2222
 $ docker run --name ssh -dti -p 2222:22 --privileged neytor/ssh
 $ docker run --name ssh -dti -p 22:22 --privileged neytor/ssh
 
-Opcional: Habilitar contexto container_file_t
+Opcional: Usted puede habilitar el contexto container_file_t
 ```
+
+## Variables para crear usuario y contraseña con opción -e
+En construcción
 
 ## Te invito a visitar mi web
 Puedes ver nuevos eventos en [https://www.neytor.com/](https://www.neytor.com).
