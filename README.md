@@ -1,12 +1,12 @@
 Conectate vía ssh a tus contenedores para gestionarlos
 ======================================================
 
-# Referencia rápida
+## Referencia rápida
 
 -	**Web Yonier Gómez**:  
 	[Sitio oficial de Neytor](https://www.neytor.com) web en construcción.
   
-# ¿Qué es  ssh?
+## ¿Qué es  ssh?
 
 SSH o Secure Shell, es un protocolo de administración remota que permite a los usuarios controlar y modificar sus servidores remotos a través de Internet. 
 
@@ -15,25 +15,25 @@ SSH o Secure Shell, es un protocolo de administración remota que permite a los 
 ![logo](https://miro.medium.com/max/544/0*mqE9-fHbs78SweX_.png)
 
 
-# ¿Cómo usar esta imagen?
+## ¿Cómo usar esta imagen?
 
-## Crear container y exponer el puerto 22
+#### Crear container y exponer el puerto 22
 
 ```console
 $ docker run --name ssh -dti -p 22:22 neytor/ssh
 ```
-## Crear container y exponer el puerto 2222
+#### Crear container y exponer el puerto 2222
 
 ```console
 $ docker run  --name ssh -dti -p 2222:22 neytor/ssh
 ```
-## ¿Cómo consultar la ip de mi contenedor?
+#### ¿Cómo consultar la ip de mi contenedor?
 
 ```console
 $ docker inspect ssh
 ```
 
-## Conectarse vía ssh desde mi terminal
+#### Conectarse vía ssh desde mi terminal
 
 Para la conexión vía ssh se utiliza el usuario labo o root con password labo
 
@@ -41,7 +41,7 @@ Para la conexión vía ssh se utiliza el usuario labo o root con password labo
 $ ssh -i labo #ipdelamáquinadondecorremicontenedor -p 2222
 ```
 
-## ¿Utilizas Selinux? crear contenedor con privilegios
+#### ¿Utilizas Selinux? crear contenedor con privilegios
 
 ```console
 $ docker run --name ssh -dti -p 2222:22 --privileged neytor/ssh
@@ -50,7 +50,7 @@ $ docker run --name ssh -dti -p 22:22 --privileged neytor/ssh
 Opcional: Usted puede habilitar el contexto container_file_t
 ```
 
-## Variables para crear usuario y contraseña con opción -e
+#### Variables para crear usuario y contraseña con opción -e
 En construcción
 
 ## Te invito a visitar mi web
