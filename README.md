@@ -20,9 +20,9 @@ SSH o Secure Shell, es un protocolo de administración remota que permite a los 
 #### Crear container y exponer el puerto 22
 
 ```console
-$ docker run --name ssh -dti -p 22:22 neytor/ssh
+$ docker run --name ssh -dti neytor/ssh
 ```
-#### Crear container y exponer el puerto 2222
+#### Crear container y exponer el puerto 2222 opcional
 
 ```console
 $ docker run  --name ssh -dti -p 2222:22 neytor/ssh
@@ -35,10 +35,10 @@ $ docker inspect ssh
 
 #### Conectarse vía ssh desde mi terminal
 
-Para la conexión vía ssh se utiliza el usuario labo o root con password labo
+Para la conexión vía ssh se utiliza el usuario remote_user
 
 ```console
-$ ssh -i labo #ipdelamáquinadondecorremicontenedor -p 2222
+$ ssh -i remote_key remote_user@ipdelamáquinadondecorremicontenedor
 ```
 
 #### ¿Utilizas Selinux? crear contenedor con privilegios
