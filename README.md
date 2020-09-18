@@ -30,7 +30,7 @@ $ docker run  --name ssh -dti -p 2222:22 neytor/ssh
 #### ¿Cómo consultar la ip de mi contenedor?
 
 ```console
-$ docker inspect ssh
+$ docker inspect ssh | grep -w IPAddress
 ```
 
 #### Conectarse vía ssh desde mi terminal
@@ -38,7 +38,7 @@ $ docker inspect ssh
 Para la conexión vía ssh se utiliza el usuario remote_user
 
 ```console
-$ ssh -i remote_key remote_user@ipdelamáquinadondecorremicontenedor
+$ ssh -i remote_key remote_user@ipdelcontainer
 ```
 
 #### ¿Utilizas Selinux? crear contenedor con privilegios
