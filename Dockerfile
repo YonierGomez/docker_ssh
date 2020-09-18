@@ -1,20 +1,22 @@
 FROM centos
 
-MAINTAINER Yonier Gómez yonieer13@gmail.com
+LABEL maintainer Yonier Gómez
 
-LABEL ssh: v1
+RUN yum -y install openssh-server passwd sudo
 
-RUN yum -y install openssh openssh-server openssh-clients openssl-libs \ 
-    net-tools bind-utils vim sudo
-
-ENV user=labo \
-    password=labo \
-    passroot=labo
+ENV user=remote_user \
+    password=lab \
+    passroot=lab
 
 RUN useradd $user && echo $password | passwd --stdin $user && \
-    echo $passroot | passwd --stdin root && \
     echo "$user ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/$user && \
-    ssh-keygen -A
+    mkdir /home/$user/.ssh && chmod 700 /home/$user/.ssh
+
+COPY remote-key.pub /home/$user/.ssh/authorized_keys
+
+RUN chown $user:$user -R /home/$user && \
+    chmod 600 /home/$user/.ssh/authorized_keys && \
+    ssh-keygen -A && rm -f /run/nologin
 
 EXPOSE 22
 
